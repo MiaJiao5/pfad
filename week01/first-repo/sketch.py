@@ -24,7 +24,7 @@ import random
 # The knobs. These are yours. Change them, run again, look, commit.
 # ---------------------------------------------------------------------------
 
-COLS = 12            # squares across
+COLS = 180            # squares across
 ROWS = 22            # squares down — the chaos builds over this many rows
 SEED = 5913          # any integer. Same seed = same image, every time, forever.
 CHAOS = 1.0           # how fast order collapses. 0 = perfect grid. 2 = rubble.
@@ -34,7 +34,7 @@ STROKE = "#111111"   # line colour
 BACKGROUND = "#faf8f4"
 STROKE_WIDTH = 1.4
 
-OUTPUT = "sketch.svg"
+OUTPUT = "sketch1.svg"
 
 # ---------------------------------------------------------------------------
 # The drawing.
