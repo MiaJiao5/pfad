@@ -11,7 +11,7 @@ from PIL import Image
 out = Path(__file__).resolve().parent / "out"
 out.mkdir(exist_ok=True)
 
-pixels = np.zeros((100, 100, 3), dtype=np.uint8)
+pixels = np.zeros((80, 120, 3), dtype=np.uint8)
 pixels[:50, :50] = [255, 0, 0]
 image = Image.fromarray(pixels)
 gray = image.convert("L")

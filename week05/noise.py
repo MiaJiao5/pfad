@@ -16,7 +16,7 @@ out = Path(__file__).resolve().parent / "out"
 out.mkdir(exist_ok=True)
 
 rng = random.Random(SEED)
-pixels = [(rng.randrange(256), rng.randrange(256), rng.randrange(256))
+pixels = [(rng.randrange(100, 256), rng.randrange(80), rng.randrange(80))
           for _ in range(WIDTH * HEIGHT)]
 image = Image.new("RGB", (WIDTH, HEIGHT))
 image.putdata(pixels)
