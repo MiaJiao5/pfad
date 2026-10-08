@@ -10,7 +10,11 @@ from pathlib import Path
 
 from fastapi import FastAPI, Query
 from fastapi.middleware.cors import CORSMiddleware
-from workers import asgi
+
+try:
+    from workers import asgi
+except ImportError:  # Local FastAPI runs do not install the Cloudflare adapter.
+    asgi = None
 
 try:
     from .transform import parse_rows, select_month
@@ -44,4 +48,4 @@ def tides(month: int = Query(ge=1, le=12)):
 
 
 # Cloudflare's Python ASGI adapter turns the FastAPI app into a Worker entrypoint.
-Default = asgi.entrypoint(app)
+Default = asgi.entrypoint(app) if asgi is not None else app

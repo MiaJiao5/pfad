@@ -31,7 +31,7 @@
     const eventSlider = document.querySelector("#event");
     setInterval(() => {
       document.querySelector("#poll-result").value = polled.value;
-    }, 1000);
+    }, 1;
     eventSlider.addEventListener("input", () => {
       document.querySelector("#event-result").value = eventSlider.value;
     });

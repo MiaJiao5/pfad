@@ -1,0 +1,13 @@
+{
+  "name": "pfad-week04",
+  "main": "week04/tdd_api.py",
+  "compatibility_date": "2026-09-24",
+  "compatibility_flags": ["python_workers"],
+  "rules": [
+    {
+      "type": "Data",
+      "globs": ["**/*.json"],
+      "fallthrough": true
+    }
+  ]
+}
