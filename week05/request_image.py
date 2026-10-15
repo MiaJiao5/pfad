@@ -13,7 +13,7 @@ from urllib.request import Request, urlopen
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--prompt", default="An orange circle on cream paper")
+    parser.add_argument("--prompt", default="A dog with human-like face, eating an ice cream",)
     parser.add_argument("--send", action="store_true", help="Send the request using EASEL_KEY")
     args = parser.parse_args()
     payload = {
