@@ -16,8 +16,8 @@ class Scene:
             raise ValueError("id must be a string of 1 to 48 characters.")
         if message["action"] != "set_x":
             raise ValueError("action must be set_x.")
-        if type(message["x"]) is not int or not 0 <= message["x"] <= 100:
-            raise ValueError("x must be a whole number from 0 to 100.")
+        if type(message["x"]) is not int or not 0 <= message["x"] <= 80:
+            raise ValueError("x must be a whole number from 0 to 80.")
         self.x = message["x"]
         self.revision += 1
         return {"type": "ack", "id": message["id"], "revision": self.revision}
