@@ -43,7 +43,7 @@ target = bpy.data.objects.get(options.target)
 if target is None:
     raise ValueError(f"Missing object: {options.target}; use Sculpture")
 before = list(target.scale)
-target.scale = (options.scale, options.scale, options.scale)
+target.scale = (1.6 * options.scale, 0.75 * options.scale, options.scale)
 target.location.z = options.scale
 scene = bpy.context.scene
 scene.render.engine = 'CYCLES'
